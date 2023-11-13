@@ -2,7 +2,9 @@
 #include <stdlib.h>
 static format_specifier format_specifiers[] = {
 	{"i", print_integer},
-	{"d", print_integer}
+	{"d", print_integer},
+	{"c", print_char},
+	{"s", print_string}
 };
 /**
  * _printf - Produces output according to the fotmat
