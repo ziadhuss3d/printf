@@ -39,7 +39,7 @@ int _printf(const char *format, ...)
 					width, precision, size);
 			if (printed == -1)
 				return (-1);
-			printed_chars += printed
+			printed_chars += printd;
 		}
 	print_buffer(buffer, &buff_ind);
 
