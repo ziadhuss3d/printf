@@ -106,6 +106,10 @@ int print_percent(va_list types, char buffer[],
 int print_int(va_list types, char buffer[],
 	int flags, int width, int precision, int size)
 {
+	void(flags);
+	void(width);
+	void(precision);
+
 	int i = BUFF_SIZE - 2;
 	int is_negative = 0;
 	long int n = va_arg(types, long int);
@@ -129,8 +133,9 @@ int print_int(va_list types, char buffer[],
 		buffer[i--] = (num % 10) + '0';
 		num /= 10;
 	}
-	i++
-return (write_number(is_negative, i, buffer, flags, width, precision, size));
+	i++;
+
+	return (write_number(is_negative, i, buffer, flags, width, precision, size));
 }
 
 /**
